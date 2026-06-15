@@ -33,7 +33,8 @@ function saveDB() {
 }
 
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 // CORS
 app.use((req, res, next) => {
