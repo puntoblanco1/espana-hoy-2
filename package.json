@@ -1,0 +1,12 @@
+{
+  "name": "espana-hoy",
+  "version": "1.0.0",
+  "description": "España Hoy | إسبانيا اليوم - Arabic news platform about Spain",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

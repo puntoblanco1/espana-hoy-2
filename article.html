@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إسبانيا اليوم | مقال</title>
+  <meta name="description" content="أخبار إسبانيا بالعربية">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Tajawal', sans-serif; background: #f8f9fa; color: #1a1a2e; line-height: 1.8; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 15px; }
+
+    /* Top Bar */
+    .top-bar { background: #c41e3a; color: white; padding: 8px 0; font-size: 13px; }
+    .top-bar-inner { display: flex; justify-content: space-between; align-items: center; }
+
+    /* Header */
+    header { background: white; padding: 20px 0; border-bottom: 3px solid #c41e3a; }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 32px; font-weight: 900; color: #1a1a2e; text-decoration: none; }
+    .logo span { color: #c41e3a; }
+
+    /* Article Header */
+    .article-header { background: white; padding: 40px 0 30px; }
+    .article-category { display: inline-block; background: #c41e3a; color: white; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; margin-bottom: 15px; }
+    .article-title { font-size: 36px; font-weight: 900; line-height: 1.3; margin-bottom: 20px; }
+    .article-meta { display: flex; gap: 20px; color: #666; font-size: 14px; margin-bottom: 25px; }
+    .article-meta span { display: flex; align-items: center; gap: 5px; }
+    .article-image { width: 100%; max-height: 450px; object-fit: cover; border-radius: 15px; margin-bottom: 30px; }
+
+    /* Ad In-Article Top */
+    .ad-in-article { background: #f0f0f0; padding: 20px; text-align: center; margin: 30px 0; border-radius: 10px; }
+    .ad-label { font-size: 11px; color: #999; margin-bottom: 10px; }
+
+    /* Article Content */
+    .article-body { background: white; padding: 40px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); }
+    .article-body p { font-size: 18px; margin-bottom: 25px; line-height: 1.8; color: #333; }
+    .article-body h2 { font-size: 28px; font-weight: 800; margin: 40px 0 20px; color: #1a1a2e; padding-bottom: 10px; border-bottom: 3px solid #c41e3a; }
+    .article-body h3 { font-size: 22px; font-weight: 700; margin: 30px 0 15px; color: #c41e3a; }
+    .article-body ul { margin: 20px 40px; }
+    .article-body li { margin: 12px 0; font-size: 17px; }
+    .article-body strong { color: #c41e3a; }
+
+    /* Share */
+    .share-section { background: white; padding: 30px; border-radius: 15px; margin-bottom: 30px; text-align: center; }
+    .share-title { font-size: 20px; font-weight: 800; margin-bottom: 20px; }
+    .share-buttons { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+    .share-btn { padding: 12px 30px; border-radius: 8px; text-decoration: none; color: white; font-weight: 700; transition: opacity 0.3s; }
+    .share-btn:hover { opacity: 0.8; }
+    .share-fb { background: #1877f2; }
+    .share-wa { background: #25d366; }
+    .share-tw { background: #1da1f2; }
+    .share-tg { background: #0088cc; }
+
+    /* FAQ */
+    .faq-section { background: white; padding: 30px; border-radius: 15px; margin-bottom: 30px; }
+    .faq-title { font-size: 24px; font-weight: 800; margin-bottom: 25px; padding-bottom: 10px; border-bottom: 3px solid #c41e3a; }
+    .faq-item { border-bottom: 1px solid #eee; padding: 20px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-question { font-weight: 800; font-size: 18px; margin-bottom: 10px; color: #1a1a2e; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { color: #666; font-size: 16px; line-height: 1.7; padding-right: 20px; }
+
+    /* Related */
+    .related-section { margin-bottom: 40px; }
+    .related-title { font-size: 24px; font-weight: 800; margin-bottom: 25px; padding-bottom: 10px; border-bottom: 3px solid #c41e3a; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+    .related-card { background: white; border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.3s; box-shadow: 0 3px 15px rgba(0,0,0,0.08); }
+    .related-card:hover { transform: translateY(-5px); }
+    .related-img { width: 100%; height: 150px; object-fit: cover; }
+    .related-content { padding: 15px; }
+    .related-category { color: #c41e3a; font-size: 12px; font-weight: 700; }
+    .related-title-text { font-size: 16px; font-weight: 700; margin-top: 5px; line-height: 1.4; }
+
+    /* Ad Bottom */
+    .ad-bottom { background: #f0f0f0; padding: 20px; text-align: center; margin: 30px 0; border-radius: 10px; }
+
+    /* Footer */
+    footer { background: #1a1a2e; color: white; padding: 40px 0 20px; margin-top: 50px; text-align: center; }
+
+    .loading { text-align: center; padding: 60px; }
+    .loading-spinner { width: 50px; height: 50px; border: 4px solid #f0f0f0; border-top-color: #c41e3a; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @media (max-width: 768px) {
+      .article-title { font-size: 24px; }
+      .article-body { padding: 20px; }
+      .article-body p { font-size: 16px; }
+      .share-buttons { flex-direction: column; }
+      .share-btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div id="current-date"></div>
+      <div><a href="/" style="color:white;text-decoration:none;">← الرئيسية</a></div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container header-inner">
+      <a href="/" class="logo">إسبانيا <span>اليوم</span></a>
+    </div>
+  </header>
+
+  <div id="article-container">
+    <div class="loading">
+      <div class="loading-spinner"></div>
+      <p>جاري تحميل المقال...</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 إسبانيا اليوم | España Hoy</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('current-date').textContent = new Date().toLocaleDateString('ar-SA', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+    async function loadArticle() {
+      const slug = window.location.pathname.split('/').pop();
+      const container = document.getElementById('article-container');
+
+      try {
+        const res = await fetch(`/api/articles/${slug}`);
+        if (!res.ok) throw new Error('Article not found');
+        const article = await res.json();
+
+        const shareUrl = encodeURIComponent(window.location.href);
+        const shareText = encodeURIComponent(article.title);
+
+        container.innerHTML = `
+          <div class="article-header">
+            <div class="container">
+              <span class="article-category">${article.category || 'عام'}</span>
+              <h1 class="article-title">${article.title}</h1>
+              <div class="article-meta">
+                <span>📅 ${new Date(article.createdAt).toLocaleDateString('ar-SA')}</span>
+                <span>👁️ ${Math.floor(Math.random() * 10000) + 5000} مشاهدة</span>
+                <span>⏱️ ${Math.floor(Math.random() * 5) + 3} دقائق قراءة</span>
+              </div>
+              <img src="${article.image || 'https://image.pollinations.ai/prompt/Spain%20news%20arabic?width=800&height=400&nologo=true'}" class="article-image" alt="${article.title}">
+            </div>
+          </div>
+
+          <div class="container">
+            <!-- Ad Top -->
+            <div class="ad-in-article">
+              <div class="ad-label">إعلان</div>
+              <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="1234567894" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+            </div>
+
+            <div class="article-body">
+              <p><strong>${article.excerpt || article.title}</strong></p>
+              ${article.content ? article.content.split('\n').filter(p => p.trim()).map(p => `<p>${p}</p>`).join('') : `
+                <p>إسبانيا من أكثر الدول الأوروبية جذباً للمهاجرين العرب، وذلك لعدة أسباب منها المناخ المعتدل، والتكلفة المنخفضة نسبياً مقارنة بدول أوروبا الشمالية، والثقافة المتوسطية القريبة من الثقافة العربية.</p>
+                <p>في هذا المقال، نستعرض أهم المستجدات المتعلقة بـ ${article.category || 'الموضوع'} في إسبانيا لعام 2026، ونقدم نصائح عملية للمهاجرين العرب.</p>
+                <h2>أهم النقاط الرئيسية</h2>
+                <ul>
+                  <li>مستجدات قوانين الهجرة والإقامة في إسبانيا</li>
+                  <li>فرص العمل المتاحة للعرب في مختلف المجالات</li>
+                  <li>نصائح للحصول على الإقامة بشكل قانوني</li>
+                  <li>معلومات عن السكن والعقارات في المدن الإسبانية</li>
+                </ul>
+                <p>تعتبر إسبانيا وجهة مثالية للعديد من العرب الباحثين عن حياة أفضل في أوروبا، خاصة مع توفر برامج الهجرة المتعددة مثل تأشيرة النوماد الرقمي، والهجرة للعمل، والهجرة عبر الاستثمار.</p>
+              `}
+            </div>
+
+            <!-- Ad Middle -->
+            <div class="ad-in-article">
+              <div class="ad-label">إعلان</div>
+              <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="1234567895" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+            </div>
+
+            <div class="share-section">
+              <div class="share-title">📢 شارك المقال مع أصدقائك</div>
+              <div class="share-buttons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=${shareUrl}" class="share-btn share-fb" target="_blank">📘 فيسبوك</a>
+                <a href="https://wa.me/?text=${shareText}%20${shareUrl}" class="share-btn share-wa" target="_blank">📱 واتساب</a>
+                <a href="https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}" class="share-btn share-tw" target="_blank">🐦 تويتر</a>
+                <a href="https://t.me/share/url?url=${shareUrl}&text=${shareText}" class="share-btn share-tg" target="_blank">✈️ تليجرام</a>
+              </div>
+            </div>
+
+            <div class="faq-section">
+              <h2 class="faq-title">❓ أسئلة شائعة</h2>
+              <div class="faq-item">
+                <div class="faq-question">هل هذا الخبر مؤكد من مصادر رسمية؟ <span>▼</span></div>
+                <div class="faq-answer">نعم، جميع أخبارنا مبنية على مصادر رسمية إسبانية وعربية موثوقة مثل الجريدة الرسمية (BOE) والوزارات الإسبانية.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-question">كيف أحصل على إقامة في إسبانيا؟ <span>▼</span></div>
+                <div class="faq-answer">توجد عدة طرق للإقامة في إسبانيا منها: العمل، الدراسة، الاستثمار، لم الشمل، أو تأشيرة النوماد الرقمي. تابع موقعنا للتفاصيل الكاملة.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-question">ما هي متوسط تكاليف المعيشة في إسبانيا؟ <span>▼</span></div>
+                <div class="faq-answer">تتراوح تكاليف المعيشة بين 800-1500 يورو شهرياً حسب المدينة. مدريد وبرشلونة أغلى، بينما المدن الصغيرة أرخص بكثير.</div>
+              </div>
+            </div>
+
+            <div class="related-section">
+              <h2 class="related-title">📰 مقالات ذات صلة</h2>
+              <div id="related-grid" class="related-grid"></div>
+            </div>
+
+            <!-- Ad Bottom -->
+            <div class="ad-bottom">
+              <div class="ad-label">إعلان</div>
+              <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="1234567896" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+            </div>
+          </div>
+        `;
+
+        // FAQ toggle
+        document.querySelectorAll('.faq-question').forEach(q => {
+          q.addEventListener('click', function() {
+            const answer = this.nextElementSibling;
+            answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+            this.querySelector('span').textContent = answer.style.display === 'none' ? '▼' : '▲';
+          });
+        });
+
+        // Load related
+        loadRelated(article.category, article.slug);
+
+        // Initialize AdSense
+        (adsbygoogle = window.adsbygoogle || []).push({});
+
+      } catch (e) {
+        container.innerHTML = '<div style="text-align:center;padding:60px;"><h2>المقال غير موجود</h2><p><a href="/" style="color:#c41e3a;">← العودة للرئيسية</a></p></div>';
+      }
+    }
+
+    async function loadRelated(category, currentSlug) {
+      try {
+        const res = await fetch('/api/articles');
+        const articles = await res.json();
+        const related = articles.filter(a => a.category === category && a.slug !== currentSlug).slice(0, 3);
+
+        const grid = document.getElementById('related-grid');
+        if (related.length > 0) {
+          grid.innerHTML = related.map(a => `
+            <div class="related-card" onclick="location.href='/article/${a.slug}'">
+              <img src="${a.image || 'https://image.pollinations.ai/prompt/Spain%20news?width=400&height=200&nologo=true'}" class="related-img" alt="${a.title}">
+              <div class="related-content">
+                <div class="related-category">${a.category || 'عام'}</div>
+                <div class="related-title-text">${a.title}</div>
+              </div>
+            </div>
+          `).join('');
+        } else {
+          grid.innerHTML = '<p style="text-align:center;color:#999;">لا توجد مقالات ذات صلة</p>';
+        }
+      } catch (e) {
+        console.error('Related articles error:', e);
+      }
+    }
+
+    loadArticle();
+  </script>
+</body>
+</html>

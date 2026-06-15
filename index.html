@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إسبانيا اليوم | España Hoy - أخبار إسبانيا بالعربية</title>
+  <meta name="description" content="أخبار إسبانيا بالعربية - إقامة، عمل، سكن، تعليم، قوانين، اقتصاد">
+  <meta name="keywords" content="إسبانيا, الهجرة, العمل, الإقامة, مدريد, برشلونة, العرب في إسبانيا">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Tajawal', sans-serif; background: #f8f9fa; color: #1a1a2e; line-height: 1.6; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+
+    /* Top Bar */
+    .top-bar { background: #c41e3a; color: white; padding: 8px 0; font-size: 13px; }
+    .top-bar-inner { display: flex; justify-content: space-between; align-items: center; }
+    .top-bar-date { opacity: 0.9; }
+    .top-bar-links a { color: white; text-decoration: none; margin: 0 10px; opacity: 0.9; transition: opacity 0.3s; }
+    .top-bar-links a:hover { opacity: 1; }
+
+    /* Header */
+    header { background: white; padding: 20px 0; border-bottom: 3px solid #c41e3a; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 42px; font-weight: 900; color: #1a1a2e; text-decoration: none; }
+    .logo span { color: #c41e3a; }
+    .logo-tagline { font-size: 14px; color: #666; margin-top: -5px; }
+
+    /* Ad Banner Top */
+    .ad-banner { background: #f0f0f0; padding: 15px 0; text-align: center; margin: 20px 0; border-radius: 8px; min-height: 90px; display: flex; align-items: center; justify-content: center; }
+    .ad-label { font-size: 11px; color: #999; margin-bottom: 5px; }
+
+    /* Navigation */
+    nav { background: #1a1a2e; position: sticky; top: 0; z-index: 100; }
+    .nav-inner { display: flex; overflow-x: auto; scrollbar-width: none; }
+    .nav-inner::-webkit-scrollbar { display: none; }
+    .nav-item { color: white; text-decoration: none; padding: 15px 20px; font-weight: 500; white-space: nowrap; transition: background 0.3s; border-left: 1px solid rgba(255,255,255,0.1); }
+    .nav-item:hover, .nav-item.active { background: #c41e3a; }
+
+    /* Breaking News Ticker */
+    .ticker { background: #1a1a2e; color: white; padding: 10px 0; overflow: hidden; }
+    .ticker-inner { display: flex; align-items: center; }
+    .ticker-label { background: #c41e3a; padding: 5px 15px; font-weight: 700; margin-left: 15px; white-space: nowrap; }
+    .ticker-content { flex: 1; overflow: hidden; }
+    .ticker-text { white-space: nowrap; animation: ticker 20s linear infinite; }
+    @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+
+    /* Hero Section - Featured Articles */
+    .hero-section { padding: 30px 0; }
+    .hero-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+    .hero-main { position: relative; border-radius: 15px; overflow: hidden; height: 400px; }
+    .hero-main img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-main-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); padding: 30px; color: white; }
+    .hero-main-category { display: inline-block; background: #c41e3a; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 10px; }
+    .hero-main-title { font-size: 28px; font-weight: 800; line-height: 1.3; }
+    .hero-main-date { font-size: 13px; opacity: 0.8; margin-top: 10px; }
+
+    .hero-side { display: flex; flex-direction: column; gap: 15px; }
+    .hero-side-item { display: flex; gap: 15px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer; transition: transform 0.3s; }
+    .hero-side-item:hover { transform: translateX(-5px); }
+    .hero-side-img { width: 120px; height: 100px; object-fit: cover; flex-shrink: 0; }
+    .hero-side-content { padding: 10px; flex: 1; }
+    .hero-side-category { color: #c41e3a; font-size: 12px; font-weight: 700; }
+    .hero-side-title { font-size: 15px; font-weight: 700; line-height: 1.4; margin-top: 5px; }
+    .hero-side-date { font-size: 12px; color: #999; margin-top: 5px; }
+
+    /* Main Content Layout */
+    .main-layout { display: grid; grid-template-columns: 1fr 300px; gap: 30px; padding: 30px 0; }
+
+    /* Section Headers */
+    .section-header { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
+    .section-title { font-size: 24px; font-weight: 800; color: #1a1a2e; position: relative; }
+    .section-title::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 50px; height: 3px; background: #c41e3a; }
+    .section-line { flex: 1; height: 2px; background: #e0e0e0; }
+    .view-all { color: #c41e3a; text-decoration: none; font-weight: 700; font-size: 14px; }
+
+    /* Article Cards */
+    .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+    .article-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 15px rgba(0,0,0,0.08); transition: all 0.3s; cursor: pointer; }
+    .article-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+    .article-img { width: 100%; height: 180px; object-fit: cover; }
+    .article-content { padding: 20px; }
+    .article-category { display: inline-block; color: #c41e3a; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+    .article-title { font-size: 18px; font-weight: 700; line-height: 1.4; margin-bottom: 10px; color: #1a1a2e; }
+    .article-excerpt { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 15px; }
+    .article-meta { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #999; }
+    .article-date { display: flex; align-items: center; gap: 5px; }
+    .article-views { display: flex; align-items: center; gap: 5px; }
+
+    /* Sidebar */
+    .sidebar { display: flex; flex-direction: column; gap: 25px; }
+    .sidebar-widget { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); }
+    .sidebar-title { font-size: 18px; font-weight: 800; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #c41e3a; }
+
+    .trending-item { display: flex; gap: 15px; padding: 15px 0; border-bottom: 1px solid #f0f0f0; cursor: pointer; }
+    .trending-item:last-child { border-bottom: none; }
+    .trending-num { font-size: 24px; font-weight: 900; color: #c41e3a; width: 30px; flex-shrink: 0; }
+    .trending-content { flex: 1; }
+    .trending-title { font-size: 14px; font-weight: 700; line-height: 1.4; }
+    .trending-date { font-size: 12px; color: #999; margin-top: 5px; }
+
+    .category-cloud { display: flex; flex-wrap: wrap; gap: 10px; }
+    .category-tag { background: #f0f0f0; padding: 8px 15px; border-radius: 20px; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.3s; text-decoration: none; color: #1a1a2e; }
+    .category-tag:hover { background: #c41e3a; color: white; }
+
+    /* Ad Sidebar */
+    .ad-sidebar { background: #f0f0f0; border-radius: 12px; padding: 15px; text-align: center; min-height: 250px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
+    /* Footer */
+    footer { background: #1a1a2e; color: white; padding: 50px 0 20px; margin-top: 50px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+    .footer-section h3 { color: #ffd700; font-size: 20px; font-weight: 800; margin-bottom: 20px; }
+    .footer-section p { color: #ccc; line-height: 1.8; font-size: 14px; }
+    .footer-section a { color: #ccc; text-decoration: none; display: block; margin: 10px 0; transition: color 0.3s; }
+    .footer-section a:hover { color: #ffd700; }
+    .footer-social { display: flex; gap: 15px; margin-top: 20px; }
+    .social-icon { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: background 0.3s; }
+    .social-icon:hover { background: #c41e3a; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; color: #999; font-size: 14px; }
+
+    /* Loading */
+    .loading { text-align: center; padding: 60px; }
+    .loading-spinner { width: 50px; height: 50px; border: 4px solid #f0f0f0; border-top-color: #c41e3a; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-main { height: 250px; }
+      .hero-main-title { font-size: 20px; }
+      .main-layout { grid-template-columns: 1fr; }
+      .articles-grid { grid-template-columns: 1fr; }
+      .logo { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-date" id="current-date"></div>
+      <div class="top-bar-links">
+        <a href="/about">من نحن</a>
+        <a href="/contact">اتصل بنا</a>
+        <a href="/privacy">سياسة الخصوصية</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <div>
+        <a href="/" class="logo">إسبانيا <span>اليوم</span></a>
+        <div class="logo-tagline">España Hoy | أخبار إسبانيا بالعربية</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <div class="nav-inner">
+        <a href="/" class="nav-item active">الرئيسية</a>
+        <a href="/category/immigration" class="nav-item">الهجرة والإقامة</a>
+        <a href="/category/jobs" class="nav-item">فرص العمل</a>
+        <a href="/category/housing" class="nav-item">العقارات</a>
+        <a href="/category/legal" class="nav-item">شؤون قانونية</a>
+        <a href="/category/economy" class="nav-item">اقتصاد</a>
+        <a href="/category/education" class="nav-item">منح ودراسة</a>
+        <a href="/category/society" class="nav-item">المجتمع</a>
+        <a href="/category/sports" class="nav-item">رياضة</a>
+        <a href="/category/culture" class="nav-item">ثقافة</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breaking News Ticker -->
+  <div class="ticker">
+    <div class="container ticker-inner">
+      <div class="ticker-label">عاجل</div>
+      <div class="ticker-content">
+        <div class="ticker-text" id="ticker-text">جاري تحميل الأخبار العاجلة...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Ad Banner -->
+  <div class="container">
+    <div class="ad-banner">
+      <div>
+        <div class="ad-label">إعلان</div>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="1234567890" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-grid" id="hero-grid">
+        <div class="loading">
+          <div class="loading-spinner"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="main-layout">
+      <!-- Main Articles -->
+      <div class="main-content">
+        <div class="section-header">
+          <h2 class="section-title">آخر الأخبار</h2>
+          <div class="section-line"></div>
+          <a href="/category/all" class="view-all">عرض الكل ←</a>
+        </div>
+        <div id="articles-container" class="articles-grid">
+          <div class="loading">
+            <div class="loading-spinner"></div>
+            <p>جاري تحميل الأخبار...</p>
+          </div>
+        </div>
+
+        <!-- Middle Ad -->
+        <div class="ad-banner" style="margin: 40px 0;">
+          <div>
+            <div class="ad-label">إعلان</div>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="1234567891" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+          </div>
+        </div>
+
+        <!-- More Articles -->
+        <div class="section-header" style="margin-top: 40px;">
+          <h2 class="section-title">الأكثر قراءة</h2>
+          <div class="section-line"></div>
+        </div>
+        <div id="popular-articles" class="articles-grid">
+          <div class="loading">
+            <div class="loading-spinner"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <!-- Ad -->
+        <div class="ad-sidebar">
+          <div class="ad-label">إعلان</div>
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="1234567892" data-ad-format="vertical" data-full-width-responsive="true"></ins>
+        </div>
+
+        <!-- Trending -->
+        <div class="sidebar-widget">
+          <h3 class="sidebar-title">🔥 الأكثر تداولاً</h3>
+          <div id="trending-container">
+            <div class="loading">
+              <div class="loading-spinner" style="width:30px;height:30px;border-width:3px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="sidebar-widget">
+          <h3 class="sidebar-title">📂 التصنيفات</h3>
+          <div class="category-cloud">
+            <a href="/category/immigration" class="category-tag">الهجرة</a>
+            <a href="/category/jobs" class="category-tag">العمل</a>
+            <a href="/category/housing" class="category-tag">العقارات</a>
+            <a href="/category/legal" class="category-tag">قانوني</a>
+            <a href="/category/economy" class="category-tag">اقتصاد</a>
+            <a href="/category/education" class="category-tag">تعليم</a>
+            <a href="/category/society" class="category-tag">مجتمع</a>
+            <a href="/category/sports" class="category-tag">رياضة</a>
+            <a href="/category/culture" class="category-tag">ثقافة</a>
+          </div>
+        </div>
+
+        <!-- Ad -->
+        <div class="ad-sidebar">
+          <div class="ad-label">إعلان</div>
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="1234567893" data-ad-format="vertical" data-full-width-responsive="true"></ins>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h3>إسبانيا اليوم</h3>
+          <p>منصة إخبارية عربية متخصصة في أخبار إسبانيا للمهاجرين العرب. نغطي آخر الأخبار في الهجرة، العمل، السكن، التعليم، والقوانين.</p>
+          <div class="footer-social">
+            <a href="#" class="social-icon">📘</a>
+            <a href="#" class="social-icon">🐦</a>
+            <a href="#" class="social-icon">📸</a>
+            <a href="#" class="social-icon">▶️</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>التصنيفات</h3>
+          <a href="/category/immigration">الهجرة والإقامة</a>
+          <a href="/category/jobs">فرص العمل</a>
+          <a href="/category/housing">العقارات</a>
+          <a href="/category/legal">شؤون قانونية</a>
+          <a href="/category/economy">اقتصاد</a>
+        </div>
+        <div class="footer-section">
+          <h3>روابط مهمة</h3>
+          <a href="/about">من نحن</a>
+          <a href="/contact">اتصل بنا</a>
+          <a href="/privacy">سياسة الخصوصية</a>
+          <a href="/sitemap.xml">خريطة الموقع</a>
+        </div>
+        <div class="footer-section">
+          <h3>تواصل معنا</h3>
+          <p>للإعلان أو الاستفسارات:</p>
+          <a href="mailto:info@espana-hoy.com">info@espana-hoy.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 إسبانيا اليوم | España Hoy - جميع الحقوق محفوظة</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set current date
+    const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('current-date').textContent = new Date().toLocaleDateString('ar-SA', dateOptions);
+
+    async function loadArticles() {
+      try {
+        const res = await fetch('/api/articles');
+        const articles = await res.json();
+
+        if (articles.length === 0) {
+          showEmptyState();
+          return;
+        }
+
+        // Hero section
+        const heroGrid = document.getElementById('hero-grid');
+        const mainArticle = articles[0];
+        const sideArticles = articles.slice(1, 4);
+
+        heroGrid.innerHTML = `
+          <div class="hero-main" onclick="location.href='/article/${mainArticle.slug}'">
+            <img src="${mainArticle.image || 'https://image.pollinations.ai/prompt/Spain%20news%20arabic?width=800&height=400&nologo=true'}" alt="${mainArticle.title}">
+            <div class="hero-main-overlay">
+              <span class="hero-main-category">${mainArticle.category || 'عام'}</span>
+              <h2 class="hero-main-title">${mainArticle.title}</h2>
+              <div class="hero-main-date">${new Date(mainArticle.createdAt).toLocaleDateString('ar-SA')}</div>
+            </div>
+          </div>
+          <div class="hero-side">
+            ${sideArticles.map(a => `
+              <div class="hero-side-item" onclick="location.href='/article/${a.slug}'">
+                <img src="${a.image || 'https://image.pollinations.ai/prompt/Spain%20news?width=200&height=150&nologo=true'}" class="hero-side-img" alt="${a.title}">
+                <div class="hero-side-content">
+                  <div class="hero-side-category">${a.category || 'عام'}</div>
+                  <div class="hero-side-title">${a.title}</div>
+                  <div class="hero-side-date">${new Date(a.createdAt).toLocaleDateString('ar-SA')}</div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+
+        // Articles grid
+        const container = document.getElementById('articles-container');
+        const gridArticles = articles.slice(0, 6);
+        container.innerHTML = gridArticles.map(article => `
+          <div class="article-card" onclick="location.href='/article/${article.slug}'">
+            <img src="${article.image || 'https://image.pollinations.ai/prompt/Spain%20news%20arabic?width=400&height=200&nologo=true'}" class="article-img" alt="${article.title}">
+            <div class="article-content">
+              <span class="article-category">${article.category || 'عام'}</span>
+              <h3 class="article-title">${article.title}</h3>
+              <p class="article-excerpt">${article.excerpt || article.title.substring(0, 100) + '...'}</p>
+              <div class="article-meta">
+                <span class="article-date">📅 ${new Date(article.createdAt).toLocaleDateString('ar-SA')}</span>
+                <span class="article-views">👁️ ${Math.floor(Math.random() * 5000) + 1000}</span>
+              </div>
+            </div>
+          </div>
+        `).join('');
+
+        // Popular articles
+        const popularContainer = document.getElementById('popular-articles');
+        const popularArticles = [...articles].sort(() => Math.random() - 0.5).slice(0, 3);
+        popularContainer.innerHTML = popularArticles.map(article => `
+          <div class="article-card" onclick="location.href='/article/${article.slug}'">
+            <img src="${article.image || 'https://image.pollinations.ai/prompt/Spain%20news%20arabic?width=400&height=200&nologo=true'}" class="article-img" alt="${article.title}">
+            <div class="article-content">
+              <span class="article-category">${article.category || 'عام'}</span>
+              <h3 class="article-title">${article.title}</h3>
+              <p class="article-excerpt">${article.excerpt || article.title.substring(0, 100) + '...'}</p>
+              <div class="article-meta">
+                <span class="article-date">📅 ${new Date(article.createdAt).toLocaleDateString('ar-SA')}</span>
+                <span class="article-views">👁️ ${Math.floor(Math.random() * 10000) + 5000}</span>
+              </div>
+            </div>
+          </div>
+        `).join('');
+
+        // Trending
+        const trendingContainer = document.getElementById('trending-container');
+        const trendingArticles = [...articles].sort(() => Math.random() - 0.5).slice(0, 5);
+        trendingContainer.innerHTML = trendingArticles.map((article, i) => `
+          <div class="trending-item" onclick="location.href='/article/${article.slug}'">
+            <div class="trending-num">${i + 1}</div>
+            <div class="trending-content">
+              <div class="trending-title">${article.title}</div>
+              <div class="trending-date">${new Date(article.createdAt).toLocaleDateString('ar-SA')}</div>
+            </div>
+          </div>
+        `).join('');
+
+        // Ticker
+        const tickerText = document.getElementById('ticker-text');
+        tickerText.textContent = articles.slice(0, 3).map(a => a.title).join(' • ');
+
+      } catch (e) {
+        console.error('Error:', e);
+        showEmptyState();
+      }
+    }
+
+    function showEmptyState() {
+      document.getElementById('hero-grid').innerHTML = '<div style="text-align:center;padding:40px;"><h3>لا توجد مقالات حالياً</h3></div>';
+      document.getElementById('articles-container').innerHTML = '<div style="text-align:center;padding:40px;"><h3>جاري إضافة المقالات...</h3></div>';
+    }
+
+    loadArticles();
+
+    // Initialize AdSense
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>
