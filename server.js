@@ -170,6 +170,11 @@ app.get('/robots.txt', (req, res) => {
   res.send('User-agent: *\nDisallow: /webhook/\nAllow: /\nSitemap: https://espana-hoy-production.up.railway.app/sitemap.xml');
 });
 
+// Ads.txt (managed by AdsTxtManager)
+app.get('/ads.txt', (req, res) => {
+  res.redirect(301, 'https://srv.adstxtmanager.com/19390/espaniaalyoum.com');
+});
+
 // Serve pages
 app.get('/article/:slug', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'article.html'));
