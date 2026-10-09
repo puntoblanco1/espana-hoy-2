@@ -3,6 +3,11 @@ const fs = require('fs');
 const path = require('path');
 const app = express();
 
+// Ads.txt (managed by AdsTxtManager) - must precede static middleware
+app.get('/ads.txt', (req, res) => {
+  res.redirect(301, 'https://srv.adstxtmanager.com/19390/espaniaalyoum.com');
+});
+
 // Fallback storage (in-memory + file backup)
 const DATA_DIR = process.env.RAILWAY_VOLUME_MOUNT_PATH || '/tmp';
 const DB_PATH = path.join(DATA_DIR, 'db.json');
@@ -168,11 +173,6 @@ app.get('/sitemap.xml', (req, res) => {
 app.get('/robots.txt', (req, res) => {
   res.type('text/plain');
   res.send('User-agent: *\nDisallow: /webhook/\nAllow: /\nSitemap: https://espana-hoy-production.up.railway.app/sitemap.xml');
-});
-
-// Ads.txt (managed by AdsTxtManager)
-app.get('/ads.txt', (req, res) => {
-  res.redirect(301, 'https://srv.adstxtmanager.com/19390/espaniaalyoum.com');
 });
 
 // Serve pages
